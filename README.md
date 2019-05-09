@@ -36,3 +36,11 @@ openssl pkcs12 -nocerts -nodes -password pass: -out key.pem -in cer.p12
 openssl smime -sign -in deviceinfo.mobileconfig -out SignedVerifyExample.mobileconfig -signer cer.pem -inkey key.pem -certfile Intermediate.crt.pem -outform der -nodetach
 ```
 
+## HTTP
+
+要部署到服务器上去得使用https。
+
+deviceinfo和deviceinfocallback两个文件夹是web服务器的示例。
+
+访问入口是deviceinfo/index.phps
+
